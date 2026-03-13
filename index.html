@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JELDİVEN - Koruyucu Jel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0; font-family:'Roboto', sans-serif; background:#f9f9f9; color:#111;
+}
+a{text-decoration:none}
+.section{padding:60px 20px; text-align:center;}
+.hero{background:#0a2540; color:white; padding:100px 20px;}
+.hero h1{font-size:42px; margin:0;}
+.hero p{font-size:20px; margin:20px 0;}
+.btn{background:#ff6b00; color:white; padding:15px 35px; border-radius:8px; font-size:20px; display:inline-block; margin-top:20px;}
+.box{max-width:900px; margin:auto;}
+.problem{background:#fff3f0;}
+.solution{background:white;}
+.steps{background:#f4f4f4;}
+.testimonial{background:white;}
+.buy{background:#111; color:white; padding:60px 20px;}
+.buy h1{font-size:48px; margin:20px 0;}
+.lang-select{position:fixed; top:20px; right:20px; background:white; padding:10px 15px; border-radius:5px; font-size:14px; cursor:pointer; z-index:999;}
+@media(max-width:768px){.hero h1{font-size:32px;}.buy h1{font-size:36px;}}
+</style>
+</head>
+
+<body>
+
+<!-- Dil Seçici -->
+<div class="lang-select" onclick="toggleLang()">EN / TR</div>
+
+<!-- Hero -->
+<div class="hero" id="hero">
+<h1>KREM GİBİ SÜR<br>ELDİVEN GİBİ KORU</h1>
+<p>Sanayide çalışan ustalar için görünmez el koruma jeli</p>
+<a class="btn" href="https://www.shopier.com/39092287" target="_blank">HEMEN SİPARİŞ VER</a>
+</div>
+
+<!-- Problem -->
+<div class="section problem" id="problem">
+<div class="box">
+<h2>Çalışırken Elleriniz Mahvoluyor mu?</h2>
+<p>Yağ, boya ve kimyasallar ellerinizi tahriş ediyor olabilir.</p>
+</div>
+</div>
+
+<!-- Çözüm -->
+<div class="section solution" id="solution">
+<div class="box">
+<h2>JELDİVEN ÇÖZÜMÜ</h2>
+<p>
+✔ Görünmez koruma<br>
+✔ 4-6 saat etkili<br>
+✔ Sadece suyla temizlenir
+</p>
+</div>
+</div>
+
+<!-- Adım Adım Kullanım -->
+<div class="section steps" id="steps">
+<div class="box">
+<h2>Nasıl Kullanılır?</h2>
+<p>1️⃣ Ellerinize 2-3 damla sürün</p>
+<p>2️⃣ 5 dakika yayın</p>
+<p>3️⃣ Gün boyu koruma</p>
+</div>
+</div>
+
+<!-- Testimonial / Kanıt -->
+<div class="section testimonial" id="testimonial">
+<div class="box">
+<h2>Müşteri Yorumları</h2>
+<p>"Ellerim artık kimyasallardan etkilenmiyor, mükemmel bir ürün!" – Ahmet U.</p>
+<p>"Sanayi işi için birebir, kesinlikle tavsiye ederim." – Mehmet K.</p>
+</div>
+</div>
+
+<!-- Satın Alma -->
+<div class="buy" id="buy">
+<h2>BUGÜN SİPARİŞ VER</h2>
+<h1>480 TL</h1>
+<a class="btn" href="https://www.shopier.com/39092287" target="_blank">SATIN AL</a>
+<p style="margin-top:20px; font-size:16px;">Kapıda Ödeme & WhatsApp Sipariş</p>
+<a class="btn" href="https://wa.me/905XXXXXXXXX" target="_blank" style="background:#25D366; margin-top:10px;">WHATSAPP’TAN SOR</a>
+</div>
+
+<script>
+function toggleLang(){
+  const hero = document.getElementById('hero');
+  const problem = document.getElementById('problem');
+  const solution = document.getElementById('solution');
+  const steps = document.getElementById('steps');
+  const testimonial = document.getElementById('testimonial');
+  const buy = document.getElementById('buy');
+
+  if(hero.innerHTML.includes('KREM GİBİ SÜR')){
+    hero.innerHTML='<h1>APPLY LIKE CREAM<br>PROTECT LIKE GLOVES</h1><p>Invisible hand protection gel for industrial workers</p><a class="btn" href="https://www.shopier.com/39092287" target="_blank">ORDER NOW</a>';
+    problem.innerHTML='<div class="box"><h2>Are Your Hands Destroyed While Working?</h2><p>Oil, paint, and chemicals may irritate your hands.</p></div>';
+    solution.innerHTML='<div class="box"><h2>JELDİVEN SOLUTION</h2><p>✔ Invisible protection<br>✔ Lasts 4-6 hours<br>✔ Cleans with water only</p></div>';
+    steps.innerHTML='<div class="box"><h2>How To Use?</h2><p>1️⃣ Apply 2-3 drops on your hands</p><p>2️⃣ Spread for 5 minutes</p><p>3️⃣ Protects all day</p></div>';
+    testimonial.innerHTML='<div class="box"><h2>Customer Reviews</h2><p>"My hands are no longer affected by chemicals, excellent product!" – Ahmet U.</p><p>"Perfect for industrial work, highly recommended." – Mehmet K.</p></div>';
+    buy.innerHTML='<h2>ORDER TODAY</h2><h1>480 TL</h1><a class="btn" href="https://www.shopier.com/39092287" target="_blank">BUY NOW</a><p style="margin-top:20px; font-size:16px;">Cash on Delivery & WhatsApp Orders</p><a class="btn" href="https://wa.me/905XXXXXXXXX" target="_blank" style="background:#25D366; margin-top:10px;">ORDER ON WHATSAPP</a>';
+  } else { location.reload(); }
+}
+</script>
+
+</body>
+</html>
